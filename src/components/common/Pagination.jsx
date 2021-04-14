@@ -1,4 +1,5 @@
 import React from "react";
+import { arrayFromRange } from "../../utils/arrayFromRange";
 
 const Pagination = (props) => {
   const { itemsCount, pageSize, currentPage, onPageChange } = props;
@@ -32,11 +33,5 @@ const Pagination = (props) => {
     </nav>
   );
 };
-
-function arrayFromRange(min, max) {
-  let newArray = [];
-  for (min; min <= max; min++) newArray.push(min);
-  return newArray;
-}
 
 export default Pagination;
